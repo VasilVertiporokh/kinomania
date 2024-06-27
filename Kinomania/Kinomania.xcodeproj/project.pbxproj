@@ -47,6 +47,12 @@
 		1FEA2EF32C2DA13B00C0E2F5 /* CodecPro-Ultra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2EEA2C2DA13B00C0E2F5 /* CodecPro-Ultra.ttf */; };
 		1FEA2EF42C2DA13B00C0E2F5 /* CodecPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2EEB2C2DA13B00C0E2F5 /* CodecPro-Bold.ttf */; };
 		1FEA2EF52C2DA13B00C0E2F5 /* CodecPro-News.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2EEC2C2DA13B00C0E2F5 /* CodecPro-News.ttf */; };
+		1FEA2EF72C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EF62C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift */; };
+		1FEA2EF92C2DA2F000C0E2F5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EF82C2DA2F000C0E2F5 /* SplashViewController.swift */; };
+		1FEA2EFB2C2DA34400C0E2F5 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EFA2C2DA34400C0E2F5 /* SplashPresenter.swift */; };
+		1FEA2EFD2C2DA38600C0E2F5 /* SplashModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EFC2C2DA38600C0E2F5 /* SplashModuleRouter.swift */; };
+		1FEA2EFF2C2DA3D500C0E2F5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EFE2C2DA3D500C0E2F5 /* SplashView.swift */; };
+		1FEA2F012C2DA87A00C0E2F5 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2F002C2DA87A00C0E2F5 /* splashAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +96,12 @@
 		1FEA2EEA2C2DA13B00C0E2F5 /* CodecPro-Ultra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CodecPro-Ultra.ttf"; sourceTree = "<group>"; };
 		1FEA2EEB2C2DA13B00C0E2F5 /* CodecPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CodecPro-Bold.ttf"; sourceTree = "<group>"; };
 		1FEA2EEC2C2DA13B00C0E2F5 /* CodecPro-News.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CodecPro-News.ttf"; sourceTree = "<group>"; };
+		1FEA2EF62C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModuleConfigurator.swift; sourceTree = "<group>"; };
+		1FEA2EF82C2DA2F000C0E2F5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		1FEA2EFA2C2DA34400C0E2F5 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		1FEA2EFC2C2DA38600C0E2F5 /* SplashModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModuleRouter.swift; sourceTree = "<group>"; };
+		1FEA2EFE2C2DA3D500C0E2F5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		1FEA2F002C2DA87A00C0E2F5 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +267,11 @@
 		1F4AD6D52C2D7F4000927077 /* SplashModule */ = {
 			isa = PBXGroup;
 			children = (
+				1FEA2EF62C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift */,
+				1FEA2EF82C2DA2F000C0E2F5 /* SplashViewController.swift */,
+				1FEA2EFA2C2DA34400C0E2F5 /* SplashPresenter.swift */,
+				1FEA2EFE2C2DA3D500C0E2F5 /* SplashView.swift */,
+				1FEA2EFC2C2DA38600C0E2F5 /* SplashModuleRouter.swift */,
 			);
 			path = SplashModule;
 			sourceTree = "<group>";
@@ -273,6 +290,7 @@
 		1F4AD6EC2C2D884600927077 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1FEA2F002C2DA87A00C0E2F5 /* splashAnimation.json */,
 				1F4AD6ED2C2D885D00927077 /* loader.json */,
 			);
 			path = Lottie;
@@ -382,6 +400,7 @@
 				1FEA2EF12C2DA13B00C0E2F5 /* CodecPro-UltraBlackItalic.ttf in Resources */,
 				1F4AD6EE2C2D885D00927077 /* loader.json in Resources */,
 				1F4AD6FB2C2D8AE600927077 /* Config-PROD.xcconfig in Resources */,
+				1FEA2F012C2DA87A00C0E2F5 /* splashAnimation.json in Resources */,
 				1FEA2EF02C2DA13B00C0E2F5 /* CodecPro-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4AD6B02C2D768700927077 /* Coordinator.swift in Sources */,
+				1FEA2EF72C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift in Sources */,
+				1FEA2EFF2C2DA3D500C0E2F5 /* SplashView.swift in Sources */,
 				1F4AD6D12C2D7E9E00927077 /* Localization.swift in Sources */,
 				1F4AD6F32C2D89B500927077 /* DependencyContainer.swift in Sources */,
 				1F4AD6D22C2D7E9E00927077 /* Assets.swift in Sources */,
@@ -422,9 +443,11 @@
 				1F2AE7D42C2D74800094D1D5 /* AppDelegate.swift in Sources */,
 				1F4AD6DA2C2D803A00927077 /* Typealias.swift in Sources */,
 				1F4AD6D82C2D7F7B00927077 /* BasePresenterProtocol.swift in Sources */,
+				1FEA2EFB2C2DA34400C0E2F5 /* SplashPresenter.swift in Sources */,
 				1F4AD6DE2C2D81EC00927077 /* BaseViewController.swift in Sources */,
 				1F4AD6B22C2D76CE00927077 /* MainCoordinator.swift in Sources */,
 				1F2AE7D62C2D74800094D1D5 /* SceneDelegate.swift in Sources */,
+				1FEA2EFD2C2DA38600C0E2F5 /* SplashModuleRouter.swift in Sources */,
 				1F4AD6DC2C2D81B700927077 /* BaseViewProtocol.swift in Sources */,
 				1F4AD6B52C2D774000927077 /* UIStackView+Extension.swift in Sources */,
 				1F4AD6D32C2D7E9E00927077 /* Colors.swift in Sources */,
@@ -434,6 +457,7 @@
 				1F4AD6B72C2D775400927077 /* NSObject+Extension.swift in Sources */,
 				1F4AD6B92C2D776B00927077 /* UIView+Constraints.swift in Sources */,
 				1F4AD6E52C2D86C900927077 /* LoadingView.swift in Sources */,
+				1FEA2EF92C2DA2F000C0E2F5 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,17 +18,15 @@ final class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = VC()
+        let vc = SplashModuleConfigurator.createModule(router: self)
         setRoot(vc)
     }
 }
 
-import Factory
-final class VC: BaseViewController {
-    @Injected(\.appConfiguration) private var appConfiguration
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
+// MARK: - SplashModuleRouter
+extension MainCoordinator: SplashModuleRouter {
+    func showFeed() {
+        let module = UIViewController()
+        setRoot(module)
     }
 }
