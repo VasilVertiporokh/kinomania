@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Kinomania
+
+  Created by Vasia Vertiporoh on 27/06/2024.
+  
+*/
+
+"general.ok" = "ok";
+"general.cancel" = "Cancel";
+"general.error" = "Error(";

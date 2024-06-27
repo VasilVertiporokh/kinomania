@@ -1,0 +1,27 @@
+input_dir: Kinomania/Resources
+output_dir: Kinomania/Resources/Generated
+xcassets:
+  - inputs: Assets.xcassets
+    outputs:
+      templateName: swift5
+      output: Assets.swift
+      params:
+        enumName: Assets
+  - inputs: Colors.xcassets
+    outputs:
+      templateName: swift5
+      output: Colors.swift
+      params:
+        enumName: Colors
+strings:
+  inputs: en.lproj
+  outputs:
+    templateName: structured-swift5
+    output: Localization.swift
+    params:
+      enumName: Localization
+fonts:
+  inputs: Fonts
+  outputs:
+    templateName: swift5
+    output: Fonts.swift
