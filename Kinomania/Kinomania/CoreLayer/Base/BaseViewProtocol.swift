@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BaseViewProtocol {
+protocol BaseViewProtocol: AnyObject {
     func startLoading()
     func stopLoading()
 
