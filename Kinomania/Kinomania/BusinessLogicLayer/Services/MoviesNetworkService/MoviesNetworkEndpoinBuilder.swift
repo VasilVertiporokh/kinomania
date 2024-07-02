@@ -10,6 +10,15 @@ import Foundation
 enum Filter: String {
     case popularity = "popularity"
     case releaseDate = "primary_release_date.desc"
+
+    var filterName: String {
+        switch self {
+        case .popularity:
+            return ""
+        case .releaseDate:
+            return ""
+        }
+    }
 }
 
 enum MoviesNetworkEndpoinBuilder {

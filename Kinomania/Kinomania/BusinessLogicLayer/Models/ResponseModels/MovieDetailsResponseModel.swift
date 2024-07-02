@@ -8,7 +8,6 @@
 import Foundation
 
 struct MovieDetailsResponseModel: Decodable {
-    let id: Int
     let posterPath: String
     let title: String
     let releaseDate: String
@@ -21,6 +20,7 @@ struct MovieDetailsResponseModel: Decodable {
 
 struct GenresResponseModel: Decodable {
     let name: String
+    let id: Int
 }
 
 struct ProductionCountriesResponseModeI: Decodable {

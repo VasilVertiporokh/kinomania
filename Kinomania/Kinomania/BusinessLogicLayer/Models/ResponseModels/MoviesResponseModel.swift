@@ -9,7 +9,6 @@ import Foundation
 
 // MARK: - MoviesResponseModel
 struct MoviesResponseModel: Decodable {
-    let page: Int
     let results: [Movies]
 }
 
