@@ -12,11 +12,12 @@ enum AppEnvironment: String {
     case prod
 }
 
-protocol AppConfigurationService {
+protocol AppConfigurationService: ApiInfo {
     var appName: String { get }
     var bundleId: String { get }
     var environment: AppEnvironment { get }
     var appVersion: String { get }
+    var apiKey: String { get }
 }
 
 final class AppConfigurationServiceImpl: AppConfigurationService {
@@ -25,16 +26,25 @@ final class AppConfigurationServiceImpl: AppConfigurationService {
     let bundleId: String
     let environment: AppEnvironment
     let appVersion: String
+    let apiKey: String
+
+    lazy var baseURL: URL = {
+        guard let url = URL(string: "https://api.themoviedb.org") else {
+            fatalError("Invalid url")
+        }
+        return url
+    }()
 
     // MARK: - Init
     init(bundle: Bundle = .main) {
         guard
             let bundleId = bundle.bundleIdentifier,
             let infoDict = bundle.infoDictionary,
-            let environmentValue = infoDict[Key.Environment] as? String,
+            let environmentValue = infoDict[Key.environment] as? String,
             let environment = AppEnvironment(rawValue: environmentValue),
             let appVersion = infoDict["APP_VERSION"] as? String,
-            let appName = infoDict["APP_NAME"] as? String
+            let appName = infoDict["APP_NAME"] as? String,
+            let apiKey = infoDict[Key.apiKey] as? String
         else {
             fatalError("config file error")
         }
@@ -43,6 +53,7 @@ final class AppConfigurationServiceImpl: AppConfigurationService {
         self.environment = environment
         self.appVersion = appVersion
         self.appName = appName
+        self.apiKey = apiKey
 
         debugPrint("BUNDLE ID   ➡️ \(bundleId)")
         debugPrint("ENVIRONMENT ➡️ \(environment)")
@@ -52,7 +63,7 @@ final class AppConfigurationServiceImpl: AppConfigurationService {
 }
 
 private enum Key {
-    static let Environment: String = "APP_ENVIRONMENT"
-    static let AppVersion: String = "APP_VERSION"
-    static let AppName: String = "APP_NAME"
+    static let environment: String = "APP_ENVIRONMENT"
+    static let baseUrl: String = "BASE_URL"
+    static let apiKey: String = "API_KEY"
 }

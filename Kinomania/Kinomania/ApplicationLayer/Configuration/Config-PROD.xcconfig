@@ -12,3 +12,5 @@ APP_ENVIRONMENT = prod
 APP_NAME = Kinomania
 APP_BUNDLE_ID = vasia.vertiporoh.com.kinomania
 APP_VERSION = 1.0
+BASE_URL = https:/$()/api.themoviedb.org/
+API_KEY = 09189f726da5a959406d93670d566375

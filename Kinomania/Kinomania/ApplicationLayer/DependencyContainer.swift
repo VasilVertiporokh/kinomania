@@ -12,4 +12,23 @@ extension Container {
         self { AppConfigurationServiceImpl() }
             .cached
     }
+
+    var networkManager: Factory<NetworkManagerProtocol> {
+        self { NetworkManagerImpl() }
+            .cached
+    }
+
+    var moviesNetworkService: Factory<MoviesNetworkService> {
+        self {
+            let apiKey: String = self.appConfiguration.resolve().apiKey
+            let plugin = BasePlugin(apiKey: apiKey)
+            return MoviesNetworkServiceImpl(
+                provider: NetworkServiceProvider<MoviesNetworkEndpoinBuilder>(
+                    apiInfo: self.appConfiguration.resolve(),
+                    networkManager: self.networkManager.resolve(),
+                    plugins: [plugin]
+                )
+            )
+        }
+    }
 }

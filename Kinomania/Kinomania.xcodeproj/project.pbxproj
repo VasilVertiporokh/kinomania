@@ -24,7 +24,6 @@
 		1F4AD6D12C2D7E9E00927077 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6CD2C2D7E9E00927077 /* Localization.swift */; };
 		1F4AD6D22C2D7E9E00927077 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6CE2C2D7E9E00927077 /* Assets.swift */; };
 		1F4AD6D32C2D7E9E00927077 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6CF2C2D7E9E00927077 /* Colors.swift */; };
-		1F4AD6D82C2D7F7B00927077 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6D72C2D7F7B00927077 /* BasePresenterProtocol.swift */; };
 		1F4AD6DA2C2D803A00927077 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6D92C2D803A00927077 /* Typealias.swift */; };
 		1F4AD6DC2C2D81B700927077 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6DB2C2D81B700927077 /* BaseViewProtocol.swift */; };
 		1F4AD6DE2C2D81EC00927077 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6DD2C2D81EC00927077 /* BaseViewController.swift */; };
@@ -53,6 +52,23 @@
 		1FEA2EFD2C2DA38600C0E2F5 /* SplashModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EFC2C2DA38600C0E2F5 /* SplashModuleRouter.swift */; };
 		1FEA2EFF2C2DA3D500C0E2F5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2EFE2C2DA3D500C0E2F5 /* SplashView.swift */; };
 		1FEA2F012C2DA87A00C0E2F5 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2F002C2DA87A00C0E2F5 /* splashAnimation.json */; };
+		1FEA2F072C2DB21200C0E2F5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F062C2DB21200C0E2F5 /* HTTPMethod.swift */; };
+		1FEA2F092C2DB22700C0E2F5 /* RequestBuilderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F082C2DB22700C0E2F5 /* RequestBuilderError.swift */; };
+		1FEA2F0B2C2DB24B00C0E2F5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F0A2C2DB24B00C0E2F5 /* NetworkError.swift */; };
+		1FEA2F0D2C2DB25E00C0E2F5 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F0C2C2DB25E00C0E2F5 /* RequestBody.swift */; };
+		1FEA2F102C2DB29900C0E2F5 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F0F2C2DB29900C0E2F5 /* NetworkProviderProtocol.swift */; };
+		1FEA2F122C2DB2A600C0E2F5 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F112C2DB2A600C0E2F5 /* NetworkServiceProvider.swift */; };
+		1FEA2F152C2DB31800C0E2F5 /* EndpointBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F142C2DB31800C0E2F5 /* EndpointBuilderProtocol.swift */; };
+		1FEA2F172C2DB32E00C0E2F5 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F162C2DB32E00C0E2F5 /* NetworkManagerProtocol.swift */; };
+		1FEA2F192C2DB34800C0E2F5 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F182C2DB34800C0E2F5 /* NetworkLogger.swift */; };
+		1FEA2F1C2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F1B2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift */; };
+		1FEA2F1F2C2DC14900C0E2F5 /* MoviesNetworkEndpoinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F1E2C2DC14900C0E2F5 /* MoviesNetworkEndpoinBuilder.swift */; };
+		1FEA2F212C2DC6E100C0E2F5 /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F202C2DC6E100C0E2F5 /* NetworkPlugin.swift */; };
+		1FEA2F232C2DCB2B00C0E2F5 /* BasePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F222C2DCB2B00C0E2F5 /* BasePlugin.swift */; };
+		1FEA2F252C2DE29300C0E2F5 /* MoviesNetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F242C2DE29300C0E2F5 /* MoviesNetworkServiceImpl.swift */; };
+		1FEA2F272C33CF4A00C0E2F5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F262C33CF4A00C0E2F5 /* BasePresenter.swift */; };
+		1FEA2F2A2C33E9FF00C0E2F5 /* MoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F292C33E9FF00C0E2F5 /* MoviesResponseModel.swift */; };
+		1FEA2F2D2C33F4FF00C0E2F5 /* MovieDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F2C2C33F4FF00C0E2F5 /* MovieDetailsResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +93,6 @@
 		1F4AD6CD2C2D7E9E00927077 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		1F4AD6CE2C2D7E9E00927077 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		1F4AD6CF2C2D7E9E00927077 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		1F4AD6D72C2D7F7B00927077 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
 		1F4AD6D92C2D803A00927077 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		1F4AD6DB2C2D81B700927077 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		1F4AD6DD2C2D81EC00927077 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +117,23 @@
 		1FEA2EFC2C2DA38600C0E2F5 /* SplashModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModuleRouter.swift; sourceTree = "<group>"; };
 		1FEA2EFE2C2DA3D500C0E2F5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1FEA2F002C2DA87A00C0E2F5 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
+		1FEA2F062C2DB21200C0E2F5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		1FEA2F082C2DB22700C0E2F5 /* RequestBuilderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderError.swift; sourceTree = "<group>"; };
+		1FEA2F0A2C2DB24B00C0E2F5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1FEA2F0C2C2DB25E00C0E2F5 /* RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
+		1FEA2F0F2C2DB29900C0E2F5 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
+		1FEA2F112C2DB2A600C0E2F5 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		1FEA2F142C2DB31800C0E2F5 /* EndpointBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilderProtocol.swift; sourceTree = "<group>"; };
+		1FEA2F162C2DB32E00C0E2F5 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		1FEA2F182C2DB34800C0E2F5 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		1FEA2F1B2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerImpl.swift; sourceTree = "<group>"; };
+		1FEA2F1E2C2DC14900C0E2F5 /* MoviesNetworkEndpoinBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNetworkEndpoinBuilder.swift; sourceTree = "<group>"; };
+		1FEA2F202C2DC6E100C0E2F5 /* NetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlugin.swift; sourceTree = "<group>"; };
+		1FEA2F222C2DCB2B00C0E2F5 /* BasePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePlugin.swift; sourceTree = "<group>"; };
+		1FEA2F242C2DE29300C0E2F5 /* MoviesNetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNetworkServiceImpl.swift; sourceTree = "<group>"; };
+		1FEA2F262C33CF4A00C0E2F5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		1FEA2F292C33E9FF00C0E2F5 /* MoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponseModel.swift; sourceTree = "<group>"; };
+		1FEA2F2C2C33F4FF00C0E2F5 /* MovieDetailsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +195,8 @@
 			children = (
 				1F4AD6AA2C2D75E900927077 /* Coordinators */,
 				1F4AD6FC2C2D8B0D00927077 /* Services */,
+				1FEA2F042C2DB0A800C0E2F5 /* Networking */,
+				1FEA2F282C33E9F400C0E2F5 /* Models */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -279,8 +313,8 @@
 		1F4AD6D62C2D7F6F00927077 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				1F4AD6D72C2D7F7B00927077 /* BasePresenterProtocol.swift */,
 				1F4AD6DB2C2D81B700927077 /* BaseViewProtocol.swift */,
+				1FEA2F262C33CF4A00C0E2F5 /* BasePresenter.swift */,
 				1F4AD6DD2C2D81EC00927077 /* BaseViewController.swift */,
 				1F4AD6D92C2D803A00927077 /* Typealias.swift */,
 			);
@@ -309,8 +343,86 @@
 			isa = PBXGroup;
 			children = (
 				1F4AD6FD2C2D8B2500927077 /* AppConfigurationService.swift */,
+				1FEA2F1D2C2DC12F00C0E2F5 /* MoviesNetworkService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1FEA2F042C2DB0A800C0E2F5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F1A2C2DB69600C0E2F5 /* NetworkManagerImpl */,
+				1FEA2F132C2DB30800C0E2F5 /* EndpointBuilder */,
+				1FEA2F0E2C2DB28F00C0E2F5 /* NetworkProvider */,
+				1FEA2F052C2DB20500C0E2F5 /* Helpers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1FEA2F052C2DB20500C0E2F5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F062C2DB21200C0E2F5 /* HTTPMethod.swift */,
+				1FEA2F082C2DB22700C0E2F5 /* RequestBuilderError.swift */,
+				1FEA2F0A2C2DB24B00C0E2F5 /* NetworkError.swift */,
+				1FEA2F0C2C2DB25E00C0E2F5 /* RequestBody.swift */,
+				1FEA2F182C2DB34800C0E2F5 /* NetworkLogger.swift */,
+				1FEA2F202C2DC6E100C0E2F5 /* NetworkPlugin.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1FEA2F0E2C2DB28F00C0E2F5 /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F0F2C2DB29900C0E2F5 /* NetworkProviderProtocol.swift */,
+				1FEA2F112C2DB2A600C0E2F5 /* NetworkServiceProvider.swift */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		1FEA2F132C2DB30800C0E2F5 /* EndpointBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F142C2DB31800C0E2F5 /* EndpointBuilderProtocol.swift */,
+				1FEA2F162C2DB32E00C0E2F5 /* NetworkManagerProtocol.swift */,
+			);
+			path = EndpointBuilder;
+			sourceTree = "<group>";
+		};
+		1FEA2F1A2C2DB69600C0E2F5 /* NetworkManagerImpl */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F1B2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift */,
+			);
+			path = NetworkManagerImpl;
+			sourceTree = "<group>";
+		};
+		1FEA2F1D2C2DC12F00C0E2F5 /* MoviesNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F222C2DCB2B00C0E2F5 /* BasePlugin.swift */,
+				1FEA2F1E2C2DC14900C0E2F5 /* MoviesNetworkEndpoinBuilder.swift */,
+				1FEA2F242C2DE29300C0E2F5 /* MoviesNetworkServiceImpl.swift */,
+			);
+			path = MoviesNetworkService;
+			sourceTree = "<group>";
+		};
+		1FEA2F282C33E9F400C0E2F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F2B2C33EA2200C0E2F5 /* ResponseModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1FEA2F2B2C33EA2200C0E2F5 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F292C33E9FF00C0E2F5 /* MoviesResponseModel.swift */,
+				1FEA2F2C2C33F4FF00C0E2F5 /* MovieDetailsResponseModel.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,30 +545,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEA2F0D2C2DB25E00C0E2F5 /* RequestBody.swift in Sources */,
+				1FEA2F272C33CF4A00C0E2F5 /* BasePresenter.swift in Sources */,
 				1F4AD6B02C2D768700927077 /* Coordinator.swift in Sources */,
+				1FEA2F0B2C2DB24B00C0E2F5 /* NetworkError.swift in Sources */,
+				1FEA2F102C2DB29900C0E2F5 /* NetworkProviderProtocol.swift in Sources */,
 				1FEA2EF72C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift in Sources */,
+				1FEA2F1C2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift in Sources */,
 				1FEA2EFF2C2DA3D500C0E2F5 /* SplashView.swift in Sources */,
+				1FEA2F092C2DB22700C0E2F5 /* RequestBuilderError.swift in Sources */,
 				1F4AD6D12C2D7E9E00927077 /* Localization.swift in Sources */,
+				1FEA2F232C2DCB2B00C0E2F5 /* BasePlugin.swift in Sources */,
 				1F4AD6F32C2D89B500927077 /* DependencyContainer.swift in Sources */,
 				1F4AD6D22C2D7E9E00927077 /* Assets.swift in Sources */,
+				1FEA2F2D2C33F4FF00C0E2F5 /* MovieDetailsResponseModel.swift in Sources */,
 				1F4AD6AC2C2D75F900927077 /* AppCoordinator.swift in Sources */,
 				1F2AE7D42C2D74800094D1D5 /* AppDelegate.swift in Sources */,
 				1F4AD6DA2C2D803A00927077 /* Typealias.swift in Sources */,
-				1F4AD6D82C2D7F7B00927077 /* BasePresenterProtocol.swift in Sources */,
+				1FEA2F072C2DB21200C0E2F5 /* HTTPMethod.swift in Sources */,
 				1FEA2EFB2C2DA34400C0E2F5 /* SplashPresenter.swift in Sources */,
 				1F4AD6DE2C2D81EC00927077 /* BaseViewController.swift in Sources */,
+				1FEA2F212C2DC6E100C0E2F5 /* NetworkPlugin.swift in Sources */,
 				1F4AD6B22C2D76CE00927077 /* MainCoordinator.swift in Sources */,
+				1FEA2F1F2C2DC14900C0E2F5 /* MoviesNetworkEndpoinBuilder.swift in Sources */,
+				1FEA2F152C2DB31800C0E2F5 /* EndpointBuilderProtocol.swift in Sources */,
 				1F2AE7D62C2D74800094D1D5 /* SceneDelegate.swift in Sources */,
+				1FEA2F2A2C33E9FF00C0E2F5 /* MoviesResponseModel.swift in Sources */,
+				1FEA2F252C2DE29300C0E2F5 /* MoviesNetworkServiceImpl.swift in Sources */,
 				1FEA2EFD2C2DA38600C0E2F5 /* SplashModuleRouter.swift in Sources */,
 				1F4AD6DC2C2D81B700927077 /* BaseViewProtocol.swift in Sources */,
+				1FEA2F172C2DB32E00C0E2F5 /* NetworkManagerProtocol.swift in Sources */,
 				1F4AD6B52C2D774000927077 /* UIStackView+Extension.swift in Sources */,
 				1F4AD6D32C2D7E9E00927077 /* Colors.swift in Sources */,
 				1F4AD6FE2C2D8B2500927077 /* AppConfigurationService.swift in Sources */,
 				1F4AD6D02C2D7E9E00927077 /* Fonts.swift in Sources */,
 				1F4AD6BC2C2D77B600927077 /* KScrollView.swift in Sources */,
 				1F4AD6B72C2D775400927077 /* NSObject+Extension.swift in Sources */,
+				1FEA2F122C2DB2A600C0E2F5 /* NetworkServiceProvider.swift in Sources */,
 				1F4AD6B92C2D776B00927077 /* UIView+Constraints.swift in Sources */,
 				1F4AD6E52C2D86C900927077 /* LoadingView.swift in Sources */,
+				1FEA2F192C2DB34800C0E2F5 /* NetworkLogger.swift in Sources */,
 				1FEA2EF92C2DA2F000C0E2F5 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

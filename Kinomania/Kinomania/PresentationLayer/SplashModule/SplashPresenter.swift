@@ -6,13 +6,12 @@
 //
 
 import Foundation
-import Factory
 
 protocol SplashViewOutput: BasePresenterProtocol {
     func showFeed()
 }
 
-final class SplashPresenter {
+final class SplashPresenter: BasePresenter {
     // MARK: - Private properties
     private unowned let view: SplashViewInput
     private var router: SplashModuleRouter?
@@ -25,11 +24,8 @@ final class SplashPresenter {
         self.router = router
     }
 
-    // MARK: - Deinit
-    deinit {  debugPrint("Deinit of \(String(describing: self))") }
-
     // MARK: - Life cycle
-    func onViewDidLoad() {
+    override func onViewDidLoad() {
         view.runSplashAnimation()
     }
 }
