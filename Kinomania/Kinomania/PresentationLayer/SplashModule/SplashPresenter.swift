@@ -16,8 +16,6 @@ final class SplashPresenter: BasePresenter {
     private unowned let view: SplashViewInput
     private var router: SplashModuleRouter?
 
-    // MARK: - Dependency
-
     // MARK: - Init
     init(view: SplashViewInput, router: SplashModuleRouter) {
         self.view = view

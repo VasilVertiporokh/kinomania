@@ -31,4 +31,9 @@ extension Container {
             )
         }
     }
+
+    var moviesManager: Factory<MoviesManager> {
+        self { MoviesManagerImpl() }
+            .cached
+    }
 }

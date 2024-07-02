@@ -8,7 +8,7 @@
 import Foundation
 
 typealias GetMoviesResult = DataResult<MoviesResponseModel>
-typealias GetGenresResult = DataResult<GenresResponseModel>
+typealias GetGenresResult = DataResult<GenresListResponseModel>
 typealias GetDetailsResult = DataResult<MovieDetailsResponseModel>
 
 protocol MoviesNetworkService {
@@ -57,7 +57,7 @@ extension MoviesNetworkServiceImpl: MoviesNetworkService {
     func getGenres(result: @escaping GetGenresResult) {
         provider.performWithResponseModel(
             .getGenres,
-            response: GenresResponseModel.self,
+            response: GenresListResponseModel.self,
             responseHandler: result
         )
     }
