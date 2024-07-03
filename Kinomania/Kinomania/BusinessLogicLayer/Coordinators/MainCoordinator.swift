@@ -34,7 +34,8 @@ extension MainCoordinator: SplashModuleRouter {
 // MARK: - MoviesModuleRouter
 extension MainCoordinator: MoviesModuleRouter {
     func showMovie(movieId: Int) {
-        print(movieId)
+        let module = DetailsModuleConfigurator.createModule(router: self, movieId: movieId)
+        push(module)
     }
 
     func showFilers(filter: Filter, complitionHandler: ((Filter) -> Void)?) {
@@ -60,5 +61,16 @@ extension MainCoordinator: MoviesModuleRouter {
         )
         actionSheet.addAction(cancelAction)
         present(actionSheet)
+    }
+}
+
+// MARK: - DetailsModuleRouter
+extension MainCoordinator: DetailsModuleRouter {
+    func showPoster(imageUrl: URL?) {
+        
+    }
+    
+    func showPlayer(videoKey: String) {
+
     }
 }

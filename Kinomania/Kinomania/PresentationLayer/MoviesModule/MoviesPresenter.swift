@@ -14,6 +14,7 @@ protocol MoviesViewOutput: BasePresenterProtocol {
     func showFilters()
     func search(text: String)
     func showMovie(movieId: Int)
+    func refreshData()
 }
 
 final class MoviesPresenter: BasePresenter {
@@ -63,6 +64,10 @@ extension MoviesPresenter: MoviesViewOutput {
 
     func showMovie(movieId: Int) {
         router?.showMovie(movieId: movieId)
+    }
+
+    func refreshData() {
+        moviesManager.reloadData()
     }
 }
 

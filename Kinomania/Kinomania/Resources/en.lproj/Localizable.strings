@@ -13,3 +13,5 @@
 "movies.searchBarPlaceholder" = "Search";
 "movies.sort.popular" = "Popular";
 "movies.sort.votes" = "User votes";
+
+"moviesDetails.ratingLabel" = "Rating";

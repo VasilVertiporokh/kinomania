@@ -45,6 +45,7 @@ protocol MoviesManager: AnyObject {
     func setFilter(filter: Filter)
     func getMovieDetails(id: Int)
     func searchMovie(name: String)
+    func reloadData()
 }
 
 final class MoviesManagerImpl {
@@ -154,6 +155,11 @@ extension MoviesManagerImpl: MoviesManager {
 
         guard let searchWorkItem = self.searchWorkItem else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: searchWorkItem)
+    }
+
+    func reloadData() {
+        currentPage = 1
+        fetchMovies()
     }
 }
 

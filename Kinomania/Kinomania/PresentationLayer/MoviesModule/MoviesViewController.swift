@@ -29,7 +29,6 @@ final class MoviesViewController: BaseViewController {
         output.onViewDidLoad()
         initialSetup()
     }
-    
 }
 
 // MARK: - MoviesViewInput
@@ -55,6 +54,10 @@ extension MoviesViewController: MoviesViewDelegate {
 
     func showMovieDetails(id: Int) {
         output?.showMovie(movieId: id)
+    }
+
+    func refreshData() {
+        output?.refreshData()
     }
 }
 
