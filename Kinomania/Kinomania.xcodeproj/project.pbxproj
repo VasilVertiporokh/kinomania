@@ -82,6 +82,11 @@
 		1FEA2F492C34674100C0E2F5 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F482C34674100C0E2F5 /* Double+Extension.swift */; };
 		1FEA2F4B2C34690C00C0E2F5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F4A2C34690C00C0E2F5 /* UIView+Extension.swift */; };
 		1FEA2F4D2C3494CC00C0E2F5 /* emptyState.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2F4C2C3494CC00C0E2F5 /* emptyState.json */; };
+		1FEA2F502C351D6300C0E2F5 /* DetailsModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F4F2C351D6300C0E2F5 /* DetailsModuleConfigurator.swift */; };
+		1FEA2F522C351D8700C0E2F5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F512C351D8700C0E2F5 /* DetailsViewController.swift */; };
+		1FEA2F542C351DE700C0E2F5 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F532C351DE700C0E2F5 /* DetailsView.swift */; };
+		1FEA2F562C351E6000C0E2F5 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F552C351E6000C0E2F5 /* DetailsPresenter.swift */; };
+		1FEA2F582C35229A00C0E2F5 /* DetailsModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F572C35229A00C0E2F5 /* DetailsModuleRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +166,11 @@
 		1FEA2F482C34674100C0E2F5 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		1FEA2F4A2C34690C00C0E2F5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		1FEA2F4C2C3494CC00C0E2F5 /* emptyState.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyState.json; sourceTree = "<group>"; };
+		1FEA2F4F2C351D6300C0E2F5 /* DetailsModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModuleConfigurator.swift; sourceTree = "<group>"; };
+		1FEA2F512C351D8700C0E2F5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		1FEA2F532C351DE700C0E2F5 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		1FEA2F552C351E6000C0E2F5 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		1FEA2F572C35229A00C0E2F5 /* DetailsModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModuleRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +335,7 @@
 			children = (
 				1F4AD6D52C2D7F4000927077 /* SplashModule */,
 				1FEA2F382C3446D200C0E2F5 /* MoviesModule */,
+				1FEA2F4E2C351D5300C0E2F5 /* DetailsModule */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -497,6 +508,18 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1FEA2F4E2C351D5300C0E2F5 /* DetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F4F2C351D6300C0E2F5 /* DetailsModuleConfigurator.swift */,
+				1FEA2F512C351D8700C0E2F5 /* DetailsViewController.swift */,
+				1FEA2F552C351E6000C0E2F5 /* DetailsPresenter.swift */,
+				1FEA2F572C35229A00C0E2F5 /* DetailsModuleRouter.swift */,
+				1FEA2F532C351DE700C0E2F5 /* DetailsView.swift */,
+			);
+			path = DetailsModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -620,6 +643,7 @@
 				1FEA2F272C33CF4A00C0E2F5 /* BasePresenter.swift in Sources */,
 				1F4AD6B02C2D768700927077 /* Coordinator.swift in Sources */,
 				1FEA2F0B2C2DB24B00C0E2F5 /* NetworkError.swift in Sources */,
+				1FEA2F582C35229A00C0E2F5 /* DetailsModuleRouter.swift in Sources */,
 				1FEA2F102C2DB29900C0E2F5 /* NetworkProviderProtocol.swift in Sources */,
 				1FEA2EF72C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift in Sources */,
 				1FEA2F1C2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift in Sources */,
@@ -627,6 +651,7 @@
 				1FEA2F092C2DB22700C0E2F5 /* RequestBuilderError.swift in Sources */,
 				1F4AD6D12C2D7E9E00927077 /* Localization.swift in Sources */,
 				1FEA2F232C2DCB2B00C0E2F5 /* BasePlugin.swift in Sources */,
+				1FEA2F522C351D8700C0E2F5 /* DetailsViewController.swift in Sources */,
 				1FEA2F3E2C34476100C0E2F5 /* MoviesPresenter.swift in Sources */,
 				1FEA2F4B2C34690C00C0E2F5 /* UIView+Extension.swift in Sources */,
 				1F4AD6F32C2D89B500927077 /* DependencyContainer.swift in Sources */,
@@ -635,6 +660,8 @@
 				1FEA2F3C2C3446FE00C0E2F5 /* MoviesView.swift in Sources */,
 				1F4AD6AC2C2D75F900927077 /* AppCoordinator.swift in Sources */,
 				1FEA2F452C3449C900C0E2F5 /* MovieTableViewCell.swift in Sources */,
+				1FEA2F542C351DE700C0E2F5 /* DetailsView.swift in Sources */,
+				1FEA2F562C351E6000C0E2F5 /* DetailsPresenter.swift in Sources */,
 				1F2AE7D42C2D74800094D1D5 /* AppDelegate.swift in Sources */,
 				1F4AD6DA2C2D803A00927077 /* Typealias.swift in Sources */,
 				1FEA2F072C2DB21200C0E2F5 /* HTTPMethod.swift in Sources */,
@@ -669,6 +696,7 @@
 				1FEA2F492C34674100C0E2F5 /* Double+Extension.swift in Sources */,
 				1FEA2F192C2DB34800C0E2F5 /* NetworkLogger.swift in Sources */,
 				1FEA2EF92C2DA2F000C0E2F5 /* SplashViewController.swift in Sources */,
+				1FEA2F502C351D6300C0E2F5 /* DetailsModuleConfigurator.swift in Sources */,
 				1FEA2F472C3463AE00C0E2F5 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

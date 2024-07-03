@@ -12,12 +12,16 @@ protocol MoviesViewDelegate: AnyObject {
     func fetchNextPage()
     func searchTextDidChange(text: String)
     func showMovieDetails(id: Int)
+    func refreshData()
 }
 
 final class MoviesView: UIView {
     // MARK: - Subviews
     private let searchBar = UISearchBar()
     private let tableView = UITableView()
+
+    // MARK: - Private proprties
+    private let refreshControl = UIRefreshControl()
 
     private lazy var emptyView: UIView = {
         let containerView = UIView()
@@ -86,6 +90,7 @@ extension MoviesView {
     func setDataSource(model: [MoviesDomainModel]) {
         tableView.backgroundView = !model.isEmpty ? nil : emptyView
         dataSource = model
+        refreshControl.endRefreshing()
         tableView.reloadData()
     }
 }
@@ -138,5 +143,11 @@ private extension MoviesView {
         tableView.dataSource = self
         tableView.backgroundColor = .clear
         tableView.register(MovieTableViewCell.self)
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+
+    @objc func refreshData(_ sender: UIRefreshControl) {
+        delegate?.refreshData()
     }
 }

@@ -8,14 +8,25 @@
 import Foundation
 
 struct MovieDetailsResponseModel: Decodable {
-    let posterPath: String
+    let posterPath: String?
     let title: String
     let releaseDate: String
-    let productionCountries: [ProductionCountriesResponseModeI]
+    let productionCountries: [ProductionCountriesResponseModel]
     let genres: [GenresResponseModel]
     let overview: String
     let voteAverage: Double
     let videos: VideoResponseModel?
+
+    enum CodingKeys: String, CodingKey {
+        case posterPath = "poster_path"
+        case title
+        case releaseDate = "release_date"
+        case productionCountries = "production_countries"
+        case genres
+        case overview
+        case voteAverage = "vote_average"
+        case videos
+    }
 }
 
 struct GenresResponseModel: Decodable {
@@ -23,7 +34,7 @@ struct GenresResponseModel: Decodable {
     let id: Int
 }
 
-struct ProductionCountriesResponseModeI: Decodable {
+struct ProductionCountriesResponseModel: Decodable {
     let name: String
 }
 

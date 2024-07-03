@@ -17,9 +17,23 @@ struct MoviewDetailsDomainModel {
     let voteAverage: Double
     let videoKey: String?
 
+    var posterUrl: URL? { .init(string: "https://image.tmdb.org/t/p/w500/\(posterPath)") }
+
+    var shortDate: String {
+        let dateFormatter = DateFormatter()
+        let calendar = Calendar.current
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let date = dateFormatter.date(from: releaseDate) else {
+            return ""
+        }
+        return "\(calendar.component(.year, from: date))"
+    }
+    
+    var isVideoAvailable: Bool { videoKey != nil }
+
     // MARK: - Init from response model
     init(responseModel: MovieDetailsResponseModel) {
-        self.posterPath = responseModel.posterPath
+        self.posterPath = responseModel.posterPath ?? ""
         self.title = responseModel.title
         self.releaseDate = responseModel.releaseDate
         self.productionCountries = responseModel.productionCountries
