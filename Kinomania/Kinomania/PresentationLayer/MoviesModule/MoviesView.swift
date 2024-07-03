@@ -90,7 +90,7 @@ extension MoviesView {
     func setDataSource(model: [MoviesDomainModel]) {
         tableView.backgroundView = !model.isEmpty ? nil : emptyView
         dataSource = model
-        refreshControl.endRefreshing()
+        handleRefreshControl()
         tableView.reloadData()
     }
 }
@@ -145,6 +145,12 @@ private extension MoviesView {
         tableView.register(MovieTableViewCell.self)
         refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
+    }
+
+    func handleRefreshControl() {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
     }
 
     @objc func refreshData(_ sender: UIRefreshControl) {

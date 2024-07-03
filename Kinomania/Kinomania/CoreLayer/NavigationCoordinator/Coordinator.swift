@@ -41,6 +41,10 @@ extension Coordinator {
     func dismissPresentedController(completion:  (() -> Void)? = nil) {
         self.navigationController.presentedViewController?.dismiss(animated: true, completion: completion)
     }
+    func presentWithStyle(_ viewController: UIViewController, animated: Bool = true, style: UIModalPresentationStyle) {
+        viewController.modalPresentationStyle = style
+        self.navigationController.present(viewController, animated: animated)
+    }
 
     func present(_ viewController: UIViewController, animated: Bool = true) {
         self.navigationController.present(viewController, animated: true)

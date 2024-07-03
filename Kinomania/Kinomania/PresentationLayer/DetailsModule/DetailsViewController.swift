@@ -16,7 +16,7 @@ final class DetailsViewController: BaseViewController {
     private let contentView = DetailsView()
 
     // MARK: - Internal properires
-    var output: DetailsViewOutput!
+    var presenter: DetailsPresenter!
 
     // MARK: - Life cycle
     override func loadView() {
@@ -25,13 +25,13 @@ final class DetailsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.onViewDidLoad()
+        presenter.onViewDidLoad()
         initialSetup()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        output.onViewDidDisappear()
+        presenter.onViewDidDisappear()
     }
 }
 
@@ -46,11 +46,11 @@ extension DetailsViewController: DetailsViewInput {
 // MARK: - DetailsViewDelegate
 extension DetailsViewController: DetailsViewDelegate {
     func posterDidTap() {
-        output?.showPoster()
+        presenter?.showPoster()
     }
     
     func playButtonDidTap() {
-        output?.showPlayer()
+        presenter?.showPlayer()
     }
 }
 

@@ -18,8 +18,8 @@ final class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = SplashModuleConfigurator.createModule(router: self)
-        setRoot(vc)
+        let module = SplashModuleConfigurator.createModule(router: self)
+        setRoot(module)
     }
 }
 
@@ -67,7 +67,8 @@ extension MainCoordinator: MoviesModuleRouter {
 // MARK: - DetailsModuleRouter
 extension MainCoordinator: DetailsModuleRouter {
     func showPoster(imageUrl: URL?) {
-        
+        let module = PosterModuleConfigurator.createModule(router: self, posterUrl: imageUrl)
+        presentWithStyle(module, style: .overFullScreen)
     }
     
     func showPlayer(videoKey: String) {
@@ -78,3 +79,10 @@ extension MainCoordinator: DetailsModuleRouter {
 
 // MARK: - PlayerModuleRouter
 extension MainCoordinator: PlayerModuleRouter { }
+
+// MARK: -
+extension MainCoordinator: PosterModuleRouter { 
+    func closePreview() {
+        dismissPresentedController()
+    }
+}

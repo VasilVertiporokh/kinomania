@@ -11,7 +11,7 @@ final class MoviesModuleConfigurator {
     class func createModule(router: MoviesModuleRouter) -> UIViewController {
         let viewController = MoviesViewController()
         let presenter = MoviesPresenter(view: viewController, router: router)
-        viewController.output = presenter
+        viewController.presenter = presenter
         return viewController
     }
 }

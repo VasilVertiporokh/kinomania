@@ -8,7 +8,7 @@
 import Foundation
 import Factory
 
-protocol MoviesViewOutput: BasePresenterProtocol {
+protocol MoviesViewOutput {
     var filterType: Filter { get }
     func getNextPage()
     func showFilters()

@@ -93,6 +93,11 @@
 		1FEA2F612C3537DD00C0E2F5 /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F602C3537DC00C0E2F5 /* PlayerPresenter.swift */; };
 		1FEA2F632C35384300C0E2F5 /* PlayerModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F622C35384300C0E2F5 /* PlayerModuleRouter.swift */; };
 		1FEA2F662C3538D400C0E2F5 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 1FEA2F652C3538D400C0E2F5 /* YouTubeiOSPlayerHelper */; };
+		1FEA2F692C35405200C0E2F5 /* PosterModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F682C35405200C0E2F5 /* PosterModuleConfigurator.swift */; };
+		1FEA2F6B2C35407400C0E2F5 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F6A2C35407400C0E2F5 /* PosterViewController.swift */; };
+		1FEA2F6D2C3540D000C0E2F5 /* PosterView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F6C2C3540D000C0E2F5 /* PosterView .swift */; };
+		1FEA2F6F2C35411A00C0E2F5 /* PosterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F6E2C35411A00C0E2F5 /* PosterPresenter.swift */; };
+		1FEA2F712C35427100C0E2F5 /* PosterModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F702C35427100C0E2F5 /* PosterModuleRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +187,11 @@
 		1FEA2F5E2C3537B400C0E2F5 /* PlayerModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModuleConfigurator.swift; sourceTree = "<group>"; };
 		1FEA2F602C3537DC00C0E2F5 /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
 		1FEA2F622C35384300C0E2F5 /* PlayerModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModuleRouter.swift; sourceTree = "<group>"; };
+		1FEA2F682C35405200C0E2F5 /* PosterModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModuleConfigurator.swift; sourceTree = "<group>"; };
+		1FEA2F6A2C35407400C0E2F5 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		1FEA2F6C2C3540D000C0E2F5 /* PosterView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PosterView .swift"; sourceTree = "<group>"; };
+		1FEA2F6E2C35411A00C0E2F5 /* PosterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterPresenter.swift; sourceTree = "<group>"; };
+		1FEA2F702C35427100C0E2F5 /* PosterModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModuleRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +359,7 @@
 				1FEA2F382C3446D200C0E2F5 /* MoviesModule */,
 				1FEA2F4E2C351D5300C0E2F5 /* DetailsModule */,
 				1FEA2F592C35369100C0E2F5 /* PlayerModule */,
+				1FEA2F672C35403D00C0E2F5 /* PosterModule */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -545,6 +556,18 @@
 			path = PlayerModule;
 			sourceTree = "<group>";
 		};
+		1FEA2F672C35403D00C0E2F5 /* PosterModule */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F682C35405200C0E2F5 /* PosterModuleConfigurator.swift */,
+				1FEA2F6A2C35407400C0E2F5 /* PosterViewController.swift */,
+				1FEA2F6E2C35411A00C0E2F5 /* PosterPresenter.swift */,
+				1FEA2F6C2C3540D000C0E2F5 /* PosterView .swift */,
+				1FEA2F702C35427100C0E2F5 /* PosterModuleRouter.swift */,
+			);
+			path = PosterModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -675,6 +698,7 @@
 				1FEA2EF72C2DA2A600C0E2F5 /* SplashModuleConfigurator.swift in Sources */,
 				1FEA2F632C35384300C0E2F5 /* PlayerModuleRouter.swift in Sources */,
 				1FEA2F1C2C2DB69F00C0E2F5 /* NetworkManagerImpl.swift in Sources */,
+				1FEA2F6F2C35411A00C0E2F5 /* PosterPresenter.swift in Sources */,
 				1FEA2EFF2C2DA3D500C0E2F5 /* SplashView.swift in Sources */,
 				1FEA2F092C2DB22700C0E2F5 /* RequestBuilderError.swift in Sources */,
 				1F4AD6D12C2D7E9E00927077 /* Localization.swift in Sources */,
@@ -711,6 +735,7 @@
 				1FEA2EFD2C2DA38600C0E2F5 /* SplashModuleRouter.swift in Sources */,
 				1FEA2F372C343D9200C0E2F5 /* GenresListResponseModel.swift in Sources */,
 				1FEA2F612C3537DD00C0E2F5 /* PlayerPresenter.swift in Sources */,
+				1FEA2F6D2C3540D000C0E2F5 /* PosterView .swift in Sources */,
 				1F4AD6DC2C2D81B700927077 /* BaseViewProtocol.swift in Sources */,
 				1FEA2F172C2DB32E00C0E2F5 /* NetworkManagerProtocol.swift in Sources */,
 				1F4AD6B52C2D774000927077 /* UIStackView+Extension.swift in Sources */,
@@ -719,11 +744,14 @@
 				1F4AD6D02C2D7E9E00927077 /* Fonts.swift in Sources */,
 				1FEA2F302C340ACD00C0E2F5 /* MoviesManager.swift in Sources */,
 				1F4AD6BC2C2D77B600927077 /* KScrollView.swift in Sources */,
+				1FEA2F692C35405200C0E2F5 /* PosterModuleConfigurator.swift in Sources */,
 				1F4AD6B72C2D775400927077 /* NSObject+Extension.swift in Sources */,
 				1FEA2F122C2DB2A600C0E2F5 /* NetworkServiceProvider.swift in Sources */,
 				1FEA2F352C342F3E00C0E2F5 /* MoviewDetailsDomainModel.swift in Sources */,
 				1F4AD6B92C2D776B00927077 /* UIView+Constraints.swift in Sources */,
 				1F4AD6E52C2D86C900927077 /* LoadingView.swift in Sources */,
+				1FEA2F712C35427100C0E2F5 /* PosterModuleRouter.swift in Sources */,
+				1FEA2F6B2C35407400C0E2F5 /* PosterViewController.swift in Sources */,
 				1FEA2F3A2C3446EA00C0E2F5 /* MoviesViewController.swift in Sources */,
 				1FEA2F492C34674100C0E2F5 /* Double+Extension.swift in Sources */,
 				1FEA2F192C2DB34800C0E2F5 /* NetworkLogger.swift in Sources */,
@@ -887,13 +915,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SF7AW8GD6S;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -926,13 +954,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SF7AW8GD6S;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1030,13 +1058,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SF7AW8GD6S;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1127,13 +1155,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SF7AW8GD6S;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
