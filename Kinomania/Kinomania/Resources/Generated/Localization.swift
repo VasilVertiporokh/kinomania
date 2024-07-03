@@ -19,7 +19,17 @@ internal enum Localization {
     ///   Kinomania
     /// 
     ///   Created by Vasia Vertiporoh on 27/06/2024.
-    internal static let ok = Localization.tr("Localizable", "general.ok", fallback: "ok")
+    internal static let ok = Localization.tr("Localizable", "general.ok", fallback: "Ok")
+  }
+  internal enum Movies {
+    /// Search
+    internal static let searchBarPlaceholder = Localization.tr("Localizable", "movies.searchBarPlaceholder", fallback: "Search")
+    internal enum Sort {
+      /// Popular
+      internal static let popular = Localization.tr("Localizable", "movies.sort.popular", fallback: "Popular")
+      /// User votes
+      internal static let votes = Localization.tr("Localizable", "movies.sort.votes", fallback: "User votes")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -29,7 +29,6 @@
 		1F4AD6DE2C2D81EC00927077 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6DD2C2D81EC00927077 /* BaseViewController.swift */; };
 		1F4AD6E32C2D868900927077 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4AD6E22C2D868900927077 /* Lottie */; };
 		1F4AD6E52C2D86C900927077 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4AD6E42C2D86C900927077 /* LoadingView.swift */; };
-		1F4AD6E82C2D87C900927077 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4AD6E72C2D87C900927077 /* RealmSwift */; };
 		1F4AD6EB2C2D881400927077 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4AD6EA2C2D881400927077 /* Kingfisher */; };
 		1F4AD6EE2C2D885D00927077 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F4AD6ED2C2D885D00927077 /* loader.json */; };
 		1F4AD6F12C2D898400927077 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4AD6F02C2D898400927077 /* Factory */; };
@@ -73,6 +72,16 @@
 		1FEA2F332C342A3300C0E2F5 /* MoviesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F322C342A3300C0E2F5 /* MoviesDomainModel.swift */; };
 		1FEA2F352C342F3E00C0E2F5 /* MoviewDetailsDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F342C342F3E00C0E2F5 /* MoviewDetailsDomainModel.swift */; };
 		1FEA2F372C343D9200C0E2F5 /* GenresListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F362C343D9200C0E2F5 /* GenresListResponseModel.swift */; };
+		1FEA2F3A2C3446EA00C0E2F5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F392C3446EA00C0E2F5 /* MoviesViewController.swift */; };
+		1FEA2F3C2C3446FE00C0E2F5 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F3B2C3446FE00C0E2F5 /* MoviesView.swift */; };
+		1FEA2F3E2C34476100C0E2F5 /* MoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F3D2C34476100C0E2F5 /* MoviesPresenter.swift */; };
+		1FEA2F402C3447D400C0E2F5 /* MoviesModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F3F2C3447D400C0E2F5 /* MoviesModuleRouter.swift */; };
+		1FEA2F422C3448A800C0E2F5 /* MoviesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F412C3448A800C0E2F5 /* MoviesModuleConfigurator.swift */; };
+		1FEA2F452C3449C900C0E2F5 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F442C3449C900C0E2F5 /* MovieTableViewCell.swift */; };
+		1FEA2F472C3463AE00C0E2F5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F462C3463AE00C0E2F5 /* UITableView+Extension.swift */; };
+		1FEA2F492C34674100C0E2F5 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F482C34674100C0E2F5 /* Double+Extension.swift */; };
+		1FEA2F4B2C34690C00C0E2F5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F4A2C34690C00C0E2F5 /* UIView+Extension.swift */; };
+		1FEA2F4D2C3494CC00C0E2F5 /* emptyState.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FEA2F4C2C3494CC00C0E2F5 /* emptyState.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +151,16 @@
 		1FEA2F322C342A3300C0E2F5 /* MoviesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDomainModel.swift; sourceTree = "<group>"; };
 		1FEA2F342C342F3E00C0E2F5 /* MoviewDetailsDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewDetailsDomainModel.swift; sourceTree = "<group>"; };
 		1FEA2F362C343D9200C0E2F5 /* GenresListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresListResponseModel.swift; sourceTree = "<group>"; };
+		1FEA2F392C3446EA00C0E2F5 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		1FEA2F3B2C3446FE00C0E2F5 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		1FEA2F3D2C34476100C0E2F5 /* MoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPresenter.swift; sourceTree = "<group>"; };
+		1FEA2F3F2C3447D400C0E2F5 /* MoviesModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModuleRouter.swift; sourceTree = "<group>"; };
+		1FEA2F412C3448A800C0E2F5 /* MoviesModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModuleConfigurator.swift; sourceTree = "<group>"; };
+		1FEA2F442C3449C900C0E2F5 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		1FEA2F462C3463AE00C0E2F5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1FEA2F482C34674100C0E2F5 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		1FEA2F4A2C34690C00C0E2F5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1FEA2F4C2C3494CC00C0E2F5 /* emptyState.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyState.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4AD6EB2C2D881400927077 /* Kingfisher in Frameworks */,
-				1F4AD6E82C2D87C900927077 /* RealmSwift in Frameworks */,
 				1F4AD6E32C2D868900927077 /* Lottie in Frameworks */,
 				1F4AD6F12C2D898400927077 /* Factory in Frameworks */,
 			);
@@ -243,7 +261,10 @@
 			children = (
 				1F4AD6B42C2D774000927077 /* UIStackView+Extension.swift */,
 				1F4AD6B62C2D775400927077 /* NSObject+Extension.swift */,
+				1FEA2F482C34674100C0E2F5 /* Double+Extension.swift */,
 				1F4AD6B82C2D776B00927077 /* UIView+Constraints.swift */,
+				1FEA2F4A2C34690C00C0E2F5 /* UIView+Extension.swift */,
+				1FEA2F462C3463AE00C0E2F5 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				1F4AD6D52C2D7F4000927077 /* SplashModule */,
+				1FEA2F382C3446D200C0E2F5 /* MoviesModule */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -334,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				1FEA2F002C2DA87A00C0E2F5 /* splashAnimation.json */,
+				1FEA2F4C2C3494CC00C0E2F5 /* emptyState.json */,
 				1F4AD6ED2C2D885D00927077 /* loader.json */,
 			);
 			path = Lottie;
@@ -453,6 +476,27 @@
 			path = DomainModel;
 			sourceTree = "<group>";
 		};
+		1FEA2F382C3446D200C0E2F5 /* MoviesModule */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F432C3449B500C0E2F5 /* Cell */,
+				1FEA2F392C3446EA00C0E2F5 /* MoviesViewController.swift */,
+				1FEA2F412C3448A800C0E2F5 /* MoviesModuleConfigurator.swift */,
+				1FEA2F3B2C3446FE00C0E2F5 /* MoviesView.swift */,
+				1FEA2F3D2C34476100C0E2F5 /* MoviesPresenter.swift */,
+				1FEA2F3F2C3447D400C0E2F5 /* MoviesModuleRouter.swift */,
+			);
+			path = MoviesModule;
+			sourceTree = "<group>";
+		};
+		1FEA2F432C3449B500C0E2F5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA2F442C3449C900C0E2F5 /* MovieTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,7 +516,6 @@
 			name = Kinomania;
 			packageProductDependencies = (
 				1F4AD6E22C2D868900927077 /* Lottie */,
-				1F4AD6E72C2D87C900927077 /* RealmSwift */,
 				1F4AD6EA2C2D881400927077 /* Kingfisher */,
 				1F4AD6F02C2D898400927077 /* Factory */,
 			);
@@ -507,7 +550,6 @@
 			mainGroup = 1F2AE7C72C2D74800094D1D5;
 			packageReferences = (
 				1F4AD6E12C2D868900927077 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				1F4AD6E62C2D87C900927077 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				1F4AD6E92C2D881400927077 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				1F4AD6EF2C2D898400927077 /* XCRemoteSwiftPackageReference "Factory" */,
 			);
@@ -528,6 +570,7 @@
 				1F4AD6F82C2D8AD000927077 /* Config-DEV.xcconfig in Resources */,
 				1F4AD6C12C2D784400927077 /* Colors.xcassets in Resources */,
 				1F4AD6C72C2D7BF700927077 /* Localizable.strings in Resources */,
+				1FEA2F4D2C3494CC00C0E2F5 /* emptyState.json in Resources */,
 				1FEA2EF22C2DA13B00C0E2F5 /* CodecPro-Light.ttf in Resources */,
 				1F2AE7DD2C2D74810094D1D5 /* Assets.xcassets in Resources */,
 				1FEA2EEE2C2DA13B00C0E2F5 /* CodecPro-ExtraBold.ttf in Resources */,
@@ -584,15 +627,21 @@
 				1FEA2F092C2DB22700C0E2F5 /* RequestBuilderError.swift in Sources */,
 				1F4AD6D12C2D7E9E00927077 /* Localization.swift in Sources */,
 				1FEA2F232C2DCB2B00C0E2F5 /* BasePlugin.swift in Sources */,
+				1FEA2F3E2C34476100C0E2F5 /* MoviesPresenter.swift in Sources */,
+				1FEA2F4B2C34690C00C0E2F5 /* UIView+Extension.swift in Sources */,
 				1F4AD6F32C2D89B500927077 /* DependencyContainer.swift in Sources */,
 				1F4AD6D22C2D7E9E00927077 /* Assets.swift in Sources */,
 				1FEA2F2D2C33F4FF00C0E2F5 /* MovieDetailsResponseModel.swift in Sources */,
+				1FEA2F3C2C3446FE00C0E2F5 /* MoviesView.swift in Sources */,
 				1F4AD6AC2C2D75F900927077 /* AppCoordinator.swift in Sources */,
+				1FEA2F452C3449C900C0E2F5 /* MovieTableViewCell.swift in Sources */,
 				1F2AE7D42C2D74800094D1D5 /* AppDelegate.swift in Sources */,
 				1F4AD6DA2C2D803A00927077 /* Typealias.swift in Sources */,
 				1FEA2F072C2DB21200C0E2F5 /* HTTPMethod.swift in Sources */,
 				1FEA2EFB2C2DA34400C0E2F5 /* SplashPresenter.swift in Sources */,
 				1F4AD6DE2C2D81EC00927077 /* BaseViewController.swift in Sources */,
+				1FEA2F402C3447D400C0E2F5 /* MoviesModuleRouter.swift in Sources */,
+				1FEA2F422C3448A800C0E2F5 /* MoviesModuleConfigurator.swift in Sources */,
 				1FEA2F332C342A3300C0E2F5 /* MoviesDomainModel.swift in Sources */,
 				1FEA2F212C2DC6E100C0E2F5 /* NetworkPlugin.swift in Sources */,
 				1F4AD6B22C2D76CE00927077 /* MainCoordinator.swift in Sources */,
@@ -616,8 +665,11 @@
 				1FEA2F352C342F3E00C0E2F5 /* MoviewDetailsDomainModel.swift in Sources */,
 				1F4AD6B92C2D776B00927077 /* UIView+Constraints.swift in Sources */,
 				1F4AD6E52C2D86C900927077 /* LoadingView.swift in Sources */,
+				1FEA2F3A2C3446EA00C0E2F5 /* MoviesViewController.swift in Sources */,
+				1FEA2F492C34674100C0E2F5 /* Double+Extension.swift in Sources */,
 				1FEA2F192C2DB34800C0E2F5 /* NetworkLogger.swift in Sources */,
 				1FEA2EF92C2DA2F000C0E2F5 /* SplashViewController.swift in Sources */,
+				1FEA2F472C3463AE00C0E2F5 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,12 +833,13 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -819,12 +872,13 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -922,12 +976,13 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1018,12 +1073,13 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kinomania/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = Kinomania;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1079,14 +1135,6 @@
 				minimumVersion = 4.4.3;
 			};
 		};
-		1F4AD6E62C2D87C900927077 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		1F4AD6E92C2D881400927077 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -1110,11 +1158,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F4AD6E12C2D868900927077 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		1F4AD6E72C2D87C900927077 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F4AD6E62C2D87C900927077 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 		1F4AD6EA2C2D881400927077 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

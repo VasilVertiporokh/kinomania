@@ -7,16 +7,25 @@
 
 import Foundation
 
-enum Filter: String {
-    case popularity = "popularity"
-    case releaseDate = "primary_release_date.desc"
+enum Filter: CaseIterable {
+    case popularity
+    case votesCount
+
+    var param: String {
+        switch self {
+        case .popularity:
+            return "popularity"
+        case .votesCount:
+            return "vote_count.desc"
+        }
+    }
 
     var filterName: String {
         switch self {
         case .popularity:
-            return ""
-        case .releaseDate:
-            return ""
+            return Localization.Movies.Sort.popular
+        case .votesCount:
+            return Localization.Movies.Sort.votes
         }
     }
 }
@@ -49,7 +58,7 @@ extension MoviesNetworkEndpoinBuilder: EndpointBuilderProtocol {
         case .getMovies(let page, let filter):
             return [
                 "page": "\(page)",
-                "sort_by": filter.rawValue
+                "sort_by": filter.param
             ]
         case .getMoviesBy(let name, let page):
             return [
