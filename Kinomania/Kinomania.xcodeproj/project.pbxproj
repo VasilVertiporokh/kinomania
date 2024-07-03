@@ -98,6 +98,8 @@
 		1FEA2F6D2C3540D000C0E2F5 /* PosterView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F6C2C3540D000C0E2F5 /* PosterView .swift */; };
 		1FEA2F6F2C35411A00C0E2F5 /* PosterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F6E2C35411A00C0E2F5 /* PosterPresenter.swift */; };
 		1FEA2F712C35427100C0E2F5 /* PosterModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F702C35427100C0E2F5 /* PosterModuleRouter.swift */; };
+		1FEA2F742C355CB600C0E2F5 /* Connectivity in Frameworks */ = {isa = PBXBuildFile; productRef = 1FEA2F732C355CB600C0E2F5 /* Connectivity */; };
+		1FEA2F762C35610C00C0E2F5 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA2F752C35610C00C0E2F5 /* ReachabilityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +194,7 @@
 		1FEA2F6C2C3540D000C0E2F5 /* PosterView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PosterView .swift"; sourceTree = "<group>"; };
 		1FEA2F6E2C35411A00C0E2F5 /* PosterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterPresenter.swift; sourceTree = "<group>"; };
 		1FEA2F702C35427100C0E2F5 /* PosterModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModuleRouter.swift; sourceTree = "<group>"; };
+		1FEA2F752C35610C00C0E2F5 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEA2F742C355CB600C0E2F5 /* Connectivity in Frameworks */,
 				1F4AD6EB2C2D881400927077 /* Kingfisher in Frameworks */,
 				1F4AD6E32C2D868900927077 /* Lottie in Frameworks */,
 				1F4AD6F12C2D898400927077 /* Factory in Frameworks */,
@@ -498,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				1FEA2F2F2C340ACD00C0E2F5 /* MoviesManager.swift */,
+				1FEA2F752C35610C00C0E2F5 /* ReachabilityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				1F4AD6EA2C2D881400927077 /* Kingfisher */,
 				1F4AD6F02C2D898400927077 /* Factory */,
 				1FEA2F652C3538D400C0E2F5 /* YouTubeiOSPlayerHelper */,
+				1FEA2F732C355CB600C0E2F5 /* Connectivity */,
 			);
 			productName = Kinomania;
 			productReference = 1F2AE7D02C2D74800094D1D5 /* Kinomania.app */;
@@ -625,6 +631,7 @@
 				1F4AD6E92C2D881400927077 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				1F4AD6EF2C2D898400927077 /* XCRemoteSwiftPackageReference "Factory" */,
 				1FEA2F642C3538D400C0E2F5 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				1FEA2F722C355CB600C0E2F5 /* XCRemoteSwiftPackageReference "connectivity" */,
 			);
 			productRefGroup = 1F2AE7D12C2D74800094D1D5 /* Products */;
 			projectDirPath = "";
@@ -733,6 +740,7 @@
 				1FEA2F2A2C33E9FF00C0E2F5 /* MoviesResponseModel.swift in Sources */,
 				1FEA2F252C2DE29300C0E2F5 /* MoviesNetworkServiceImpl.swift in Sources */,
 				1FEA2EFD2C2DA38600C0E2F5 /* SplashModuleRouter.swift in Sources */,
+				1FEA2F762C35610C00C0E2F5 /* ReachabilityManager.swift in Sources */,
 				1FEA2F372C343D9200C0E2F5 /* GenresListResponseModel.swift in Sources */,
 				1FEA2F612C3537DD00C0E2F5 /* PlayerPresenter.swift in Sources */,
 				1FEA2F6D2C3540D000C0E2F5 /* PosterView .swift in Sources */,
@@ -1247,6 +1255,14 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		1FEA2F722C355CB600C0E2F5 /* XCRemoteSwiftPackageReference "connectivity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwbutler/connectivity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1269,6 +1285,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1FEA2F642C3538D400C0E2F5 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		1FEA2F732C355CB600C0E2F5 /* Connectivity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FEA2F722C355CB600C0E2F5 /* XCRemoteSwiftPackageReference "connectivity" */;
+			productName = Connectivity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

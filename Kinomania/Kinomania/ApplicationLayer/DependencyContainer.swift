@@ -36,4 +36,9 @@ extension Container {
         self { MoviesManagerImpl() }
             .cached
     }
+
+    var reachabilityManager: Factory<ReachabilityManager> {
+        self { ReachabilityManagerImpl() }
+            .singleton
+    }
 }

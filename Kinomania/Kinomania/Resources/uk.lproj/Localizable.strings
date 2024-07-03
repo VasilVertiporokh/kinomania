@@ -6,9 +6,10 @@
   
 */
 
-"general.ok" = "Ok";
+"general.ok" = "OК";
 "general.cancel" = "Відмінити";
-"general.error" = "Помилка(";
+"general.error" = "Помилка";
+"general.networkError" = "Ви офлайн. Будь ласка, увімкніть Wi-Fi або підключіться за допомогою мобільних даних.";
 
 "movies.searchBarPlaceholder" = "Пошук";
 "movies.sort.popular" = "Популярні";
