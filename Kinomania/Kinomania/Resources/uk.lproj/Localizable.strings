@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Kinomania
+
+  Created by Vasia Vertiporoh on 27/06/2024.
+  
+*/
+
+"general.ok" = "OК";
+"general.cancel" = "Відмінити";
+"general.error" = "Помилка";
+"general.networkError" = "Ви офлайн. Будь ласка, увімкніть Wi-Fi або підключіться за допомогою мобільних даних.";
+
+"movies.searchBarPlaceholder" = "Пошук";
+"movies.sort.popular" = "Популярні";
+"movies.sort.votes" = "Оцінка користувачів";
+
+"moviesDetails.ratingLabel" = "Рейтинг";

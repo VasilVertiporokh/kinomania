@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Kinomania
+
+  Created by Vasia Vertiporoh on 27/06/2024.
+  
+*/
+
+"general.ok" = "OK";
+"general.cancel" = "Cancel";
+"general.error" = "Error";
+"general.networkError" = "You are offline. Please, enable your Wi-Fi or connect using cellular data.";
+
+"movies.searchBarPlaceholder" = "Search";
+"movies.sort.popular" = "Popular";
+"movies.sort.votes" = "User votes";
+
+"moviesDetails.ratingLabel" = "Rating";

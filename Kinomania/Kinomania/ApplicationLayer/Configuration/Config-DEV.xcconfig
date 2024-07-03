@@ -1,0 +1,16 @@
+//
+//  Config-DEV.xcconfig
+//  Kinomania
+//
+//  Created by Vasia Vertiporoh on 27/06/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_ENVIRONMENT = dev
+APP_NAME = Kinomania DEV
+APP_BUNDLE_ID = vasia.vertiporoh.com.kinomania.dev
+APP_VERSION = 1.1
+BASE_URL = https:/$()/api.themoviedb.org/
+API_KEY = 09189f726da5a959406d93670d566375
