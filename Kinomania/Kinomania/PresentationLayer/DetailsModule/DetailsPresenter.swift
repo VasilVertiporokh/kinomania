@@ -61,6 +61,7 @@ extension DetailsPresenter: MovieManagerObserver {
     func movieManager(_ movieManager: MoviesManager, didFetch details: MoviewDetailsDomainModel) {
         view.stopLoading()
         posterUrl = details.posterUrl
+        videoKey = details.videoKey
         view.setDetails(model: details)
     }
     
