@@ -92,7 +92,7 @@ private extension MovieTableViewCell {
             movieImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             movieImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             movieImageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            movieImageView.heightAnchor.constraint(equalToConstant: 440)
+            movieImageView.heightAnchor.constraint(equalToConstant: 500)
         ])
 
         movieImageView.addSubview(titleLabel, constraints: [

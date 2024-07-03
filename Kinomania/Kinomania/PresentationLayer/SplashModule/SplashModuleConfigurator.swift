@@ -11,7 +11,7 @@ final class SplashModuleConfigurator {
     class func createModule(router: SplashModuleRouter) -> UIViewController {
         let viewController = SplashViewController()
         let presenter = SplashPresenter(view: viewController, router: router)
-        viewController.output = presenter
+        viewController.presenter = presenter
         return viewController
     }
 }

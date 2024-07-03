@@ -7,10 +7,7 @@
 
 import Foundation
 
-protocol PlayerViewOutput: BasePresenterProtocol {
-  
-}
-
+protocol PlayerViewOutput { }
 
 final class PlayerPresenter: BasePresenter {
     // MARK: - Private propertis

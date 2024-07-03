@@ -16,8 +16,8 @@ final class SplashViewController: BaseViewController {
     private let contentView = SplashView()
     
     // MARK: - Internal properires
-    var output: SplashViewOutput!
-    
+    var presenter: SplashPresenter!
+
     // MARK: - Life cycle
     override func loadView() {
         view = contentView
@@ -25,7 +25,7 @@ final class SplashViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.onViewDidLoad()
+        presenter.onViewDidLoad()
         initialSetup()
     }
 }
@@ -40,7 +40,7 @@ extension SplashViewController: SplashViewInput {
 // MARK: - SplashViewDelegate
 extension SplashViewController: SplashViewDelegate {
     func animationDidFinish() {
-        output?.showFeed()
+        presenter?.showFeed()
     }
 }
 

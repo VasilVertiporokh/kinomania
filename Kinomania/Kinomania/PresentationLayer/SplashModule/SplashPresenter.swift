@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SplashViewOutput: BasePresenterProtocol {
+protocol SplashViewOutput {
     func showFeed()
 }
 

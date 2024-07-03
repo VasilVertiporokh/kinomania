@@ -17,8 +17,8 @@ final class MoviesViewController: BaseViewController {
     private let contentView = MoviesView()
     
     // MARK: - Internal properires
-    var output: MoviesViewOutput!
-    
+    var presenter: MoviesPresenter!
+
     // MARK: - Life cycle
     override func loadView() {
         view = contentView
@@ -26,7 +26,7 @@ final class MoviesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.onViewDidLoad()
+        presenter.onViewDidLoad()
         initialSetup()
     }
 }
@@ -45,19 +45,19 @@ extension MoviesViewController: MoviesViewInput {
 // MARK: - MoviesViewDelegate
 extension MoviesViewController: MoviesViewDelegate {
     func fetchNextPage() {
-        output?.getNextPage()
+        presenter?.getNextPage()
     }
 
     func searchTextDidChange(text: String) {
-        output?.search(text: text)
+        presenter?.search(text: text)
     }
 
     func showMovieDetails(id: Int) {
-        output?.showMovie(movieId: id)
+        presenter?.showMovie(movieId: id)
     }
 
     func refreshData() {
-        output?.refreshData()
+        presenter?.refreshData()
     }
 }
 
@@ -79,7 +79,7 @@ private extension MoviesViewController {
     }
     
     @objc func rightButtonDidTap() {
-        output?.showFilters()
+        presenter?.showFilters()
     }
 }
 

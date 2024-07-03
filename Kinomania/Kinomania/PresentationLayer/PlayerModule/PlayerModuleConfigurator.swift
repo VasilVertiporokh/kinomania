@@ -11,7 +11,7 @@ final class PlayerModuleConfigurator {
     class func createModule(router: PlayerModuleRouter, videoKey: String) -> UIViewController {
         let viewController = PlayerViewController()
         let presenter = PlayerPresenter(view: viewController, router: router, videoKey: videoKey)
-        viewController.output = presenter
+        viewController.presenter = presenter
         return viewController
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import Factory
 
-protocol DetailsViewOutput: BasePresenterProtocol {
+protocol DetailsViewOutput {
     func showPoster()
     func showPlayer()
 }

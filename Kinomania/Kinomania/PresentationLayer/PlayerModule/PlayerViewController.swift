@@ -16,7 +16,7 @@ final class PlayerViewController: BaseViewController {
     private let contentView = PlayerView()
 
     // MARK: - Internal properires
-    var output: PlayerViewOutput!
+    var presenter: PlayerPresenter!
 
     // MARK: - Life cycle
     override func loadView() {
@@ -25,7 +25,7 @@ final class PlayerViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.onViewDidLoad()
+        presenter.onViewDidLoad()
         initialSetup()
     }
 }
