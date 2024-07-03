@@ -8,6 +8,21 @@
 import Foundation
 import Factory
 
+
+// MARK: - MovieManagerObserver
+protocol MovieManagerObserver: AnyObject {
+    func movieManager(_ movieManager: MoviesManager, didFetch movies: [MoviesDomainModel])
+    func movieManager(_ movieManager: MoviesManager, didChange filter: Filter)
+    func movieManager(_ movieManager: MoviesManager, didFetch details: MoviewDetailsDomainModel)
+    func movieManager(_ movieManager: MoviesManager, didFail error: Error)
+}
+
+extension MovieManagerObserver {
+    func movieManager(_ movieManager: MoviesManager, didFetch movies: [MoviesDomainModel]) { }
+    func movieManager(_ movieManager: MoviesManager, didChange filter: Filter) { }
+    func movieManager(_ movieManager: MoviesManager, didFetch details: MoviewDetailsDomainModel) { }
+}
+
 enum MoviesManagerEvent {
     case genresDidFetch
     case moviesDidFetch([MoviesDomainModel])
@@ -16,28 +31,18 @@ enum MoviesManagerEvent {
     case error(Error)
 }
 
-protocol MovieManagerObserver: AnyObject {
-    func movieManager(_ movieManager: MoviesManager, _ movies: [MoviesDomainModel])
-    func movieManager(_ movieManager: MoviesManager, _ filter: Filter)
-    func movieManager(_ movieManager: MoviesManager, _ details: MoviewDetailsDomainModel)
-    func movieManager(_ movieManager: MoviesManager, didFail error: Error)
-}
-
-extension MovieManagerObserver {
-    func movieManager(_ movieManager: MoviesManager, _ movies: [MoviesDomainModel]) { }
-    func movieManager(_ movieManager: MoviesManager, _ filter: Filter) { }
-    func movieManager(_ movieManager: MoviesManager, _ details: MoviewDetailsDomainModel) { }
-}
-
+// MARK: - MoviesManager protocol
 protocol MoviesManager: AnyObject {
     var movies: [MoviesDomainModel] { get }
     var currentPage: Int { get }
     var currentFilter: Filter { get }
+    var totalPages: Int { get }
 
     func subscribe(_ subscriber: MovieManagerObserver)
     func unsubscribe(_ subscriber: MovieManagerObserver)
     func fetchInitialMovies()
-    func fetchMovies(filter: Filter)
+    func fetchMovies()
+    func setFilter(filter: Filter)
     func getMovieDetails(id: Int)
     func searchMovie(name: String)
 }
@@ -49,15 +54,13 @@ final class MoviesManagerImpl {
     // MARK: - Internal properties
     private(set) var movies: [MoviesDomainModel] = []
     private(set) var currentPage: Int = 1
-    private(set) var currentFilter: Filter = .popularity {
-        didSet {
-            currentPage = 1
-        }
-    }
+    private(set) var totalPages: Int = 0
+    private(set) var currentFilter: Filter = .popularity
 
     // MARK: - Private properties
     private var subscribers: [MovieManagerObserver] = []
     private var genres: [GenresResponseModel] = []
+    private var isLoadingInProgress: Bool = false
     private var searchWorkItem: DispatchWorkItem?
 }
 
@@ -79,31 +82,42 @@ extension MoviesManagerImpl: MoviesManager {
             switch result {
             case .success(let genresList):
                 self.genres = genresList.genres
-                self.fetchMovies(filter: self.currentFilter)
+                self.fetchMovies()
             case .failure(let error):
                 self.notify(for: .error(error))
             }
         }
     }
 
-    func fetchMovies(filter: Filter) {
-        if currentFilter != filter {
-            currentFilter = filter
-            notify(for: .filterDidUpdate(filter))
-        }
-        moviesNetworkService.getMovies(pageNumber: "\(currentPage)", filter: filter) { [weak self] result in
+    func fetchMovies() {
+        guard !isLoadingInProgress else { return }
+        isLoadingInProgress = true
+        moviesNetworkService.getMovies(pageNumber: "\(currentPage)", filter: currentFilter) { [weak self] result in
             guard let self = self else {
                 return
             }
             switch result {
             case .success(let movies):
-                self.movies = movies.results.map { .init(genres: self.genres, moviesResponseModel: $0) }
+                let moviesList = movies.results
+                    .map { MoviesDomainModel(genres: self.genres, moviesResponseModel: $0) }
+                self.movies.append(contentsOf: moviesList)
                 self.notify(for: .moviesDidFetch(self.movies))
                 self.currentPage += 1
+                self.totalPages = movies.totalPages
+                self.isLoadingInProgress = false
             case .failure(let error):
                 self.notify(for: .error(error))
+                self.isLoadingInProgress = false
             }
         }
+    }
+
+    func setFilter(filter: Filter) {
+        notify(for: .filterDidUpdate(filter))
+        movies = []
+        currentPage = 1
+        currentFilter = filter
+        fetchMovies()
     }
 
     func getMovieDetails(id: Int) {
@@ -120,7 +134,7 @@ extension MoviesManagerImpl: MoviesManager {
     func searchMovie(name: String) {
         searchWorkItem?.cancel()
 
-        searchWorkItem = DispatchWorkItem { [weak self] in
+        let newWorkItem = DispatchWorkItem { [weak self] in
             self?.moviesNetworkService.getMovie(name: name) { [weak self] result in
                 guard let self = self else {
                     return
@@ -128,16 +142,18 @@ extension MoviesManagerImpl: MoviesManager {
                 switch result {
                 case .success(let movies):
                     let movies: [MoviesDomainModel] = name.isEmpty ? self.movies : movies.results
+                        .filter { $0.posterPath != nil }
                         .map { .init(genres: self.genres, moviesResponseModel: $0)}
                     self.notify(for: .moviesDidFetch(movies))
                 case .failure(let error):
                     notify(for: .error(error))
                 }
             }
-
-            guard let searchWorkItem = self?.searchWorkItem else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: searchWorkItem)
         }
+        searchWorkItem = newWorkItem
+
+        guard let searchWorkItem = self.searchWorkItem else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: searchWorkItem)
     }
 }
 
@@ -147,13 +163,13 @@ private extension MoviesManagerImpl {
         for subscriber in subscribers {
             switch event {
             case .genresDidFetch:
-                fetchMovies(filter: .popularity)
+                fetchMovies()
             case .moviesDidFetch(let movies):
-                subscriber.movieManager(self, movies)
+                subscriber.movieManager(self, didFetch: movies)
             case .detailsDidFetch(let details):
-                subscriber.movieManager(self, details)
+                subscriber.movieManager(self, didFetch: details)
             case .filterDidUpdate(let filter):
-                subscriber.movieManager(self, filter)
+                subscriber.movieManager(self, didChange: filter)
             case .error(let error):
                 subscriber.movieManager(self, didFail: error)
             }

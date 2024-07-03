@@ -6,6 +6,10 @@
   
 */
 
-"general.ok" = "ok";
+"general.ok" = "Ok";
 "general.cancel" = "Cancel";
 "general.error" = "Error(";
+
+"movies.searchBarPlaceholder" = "Search";
+"movies.sort.popular" = "Popular";
+"movies.sort.votes" = "User votes";

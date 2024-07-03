@@ -16,7 +16,6 @@ final class AppCoordinator: Coordinator {
     // MARK: - Init
     init(window: UIWindow) {
         self.navigationController = UINavigationController()
-        self.navigationController.isNavigationBarHidden = true
         self.window = window
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

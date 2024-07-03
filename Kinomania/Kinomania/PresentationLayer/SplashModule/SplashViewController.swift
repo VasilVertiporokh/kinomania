@@ -14,15 +14,15 @@ protocol SplashViewInput: BaseViewProtocol {
 final class SplashViewController: BaseViewController {
     // MARK: - Content view
     private let contentView = SplashView()
-
+    
     // MARK: - Internal properires
     var output: SplashViewOutput!
-
+    
     // MARK: - Life cycle
     override func loadView() {
         view = contentView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.onViewDidLoad()

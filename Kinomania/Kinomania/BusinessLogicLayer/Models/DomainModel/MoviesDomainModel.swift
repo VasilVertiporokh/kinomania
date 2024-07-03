@@ -24,6 +24,16 @@ struct MoviesDomainModel {
             .joined(separator: ", ")
     }
 
+    var shortDate: String {
+        let dateFormatter = DateFormatter()
+        let calendar = Calendar.current
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let date = dateFormatter.date(from: releaseDate) else {
+            return ""
+        }
+        return "\(calendar.component(.year, from: date))"
+    }
+
     var posterUrl: URL? { .init(string: "https://image.tmdb.org/t/p/w500/\(posterPath)") }
 
     // MARK: - Init from response model
@@ -31,7 +41,7 @@ struct MoviesDomainModel {
         self.genres = genres
         self.genreIDS = moviesResponseModel.genreIDS
         self.id = moviesResponseModel.id
-        self.posterPath = moviesResponseModel.posterPath
+        self.posterPath = moviesResponseModel.posterPath ?? ""
         self.releaseDate = moviesResponseModel.releaseDate
         self.title = moviesResponseModel.title
         self.video = moviesResponseModel.video

@@ -26,7 +26,39 @@ final class MainCoordinator: Coordinator {
 // MARK: - SplashModuleRouter
 extension MainCoordinator: SplashModuleRouter {
     func showFeed() {
-        let module = UIViewController()
+        let module = MoviesModuleConfigurator.createModule(router: self)
         setRoot(module)
+    }
+}
+
+// MARK: - MoviesModuleRouter
+extension MainCoordinator: MoviesModuleRouter {
+    func showMovie(movieId: Int) {
+        print(movieId)
+    }
+
+    func showFilers(filter: Filter, complitionHandler: ((Filter) -> Void)?) {
+        let actionSheet = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: .actionSheet)
+
+        Filter.allCases.forEach { item in
+            let action = UIAlertAction(
+                title: item.filterName,
+                style: .default) { _ in
+                    complitionHandler?(item)
+                }
+            let isChecked = (filter == item)
+            action.setValue(isChecked, forKey: "checked")
+            actionSheet.addAction(action)
+        }
+
+        let cancelAction = UIAlertAction(
+            title: Localization.General.cancel,
+            style: .cancel
+        )
+        actionSheet.addAction(cancelAction)
+        present(actionSheet)
     }
 }

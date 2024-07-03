@@ -6,6 +6,10 @@
   
 */
 
-"general.ok" = "ok";
+"general.ok" = "Ok";
 "general.cancel" = "Відмінити";
 "general.error" = "Помилка(";
+
+"movies.searchBarPlaceholder" = "Пошук";
+"movies.sort.popular" = "Популярні";
+"movies.sort.votes" = "Оцінка користувачів";

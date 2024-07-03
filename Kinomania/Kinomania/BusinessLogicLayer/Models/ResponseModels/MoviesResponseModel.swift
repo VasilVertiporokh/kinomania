@@ -10,13 +10,19 @@ import Foundation
 // MARK: - MoviesResponseModel
 struct MoviesResponseModel: Decodable {
     let results: [Movies]
+    let totalPages: Int
+
+    enum CodingKeys: String, CodingKey {
+        case results
+        case totalPages = "total_pages"
+    }
 }
 
 // MARK: - Movies
 struct Movies: Decodable {
     let genreIDS: [Int]
     let id: Int
-    let posterPath: String
+    var posterPath: String?
     let releaseDate: String
     let title: String
     let video: Bool
