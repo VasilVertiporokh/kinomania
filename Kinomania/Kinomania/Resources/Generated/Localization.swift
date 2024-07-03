@@ -13,13 +13,15 @@ internal enum Localization {
   internal enum General {
     /// Cancel
     internal static let cancel = Localization.tr("Localizable", "general.cancel", fallback: "Cancel")
-    /// Error(
-    internal static let error = Localization.tr("Localizable", "general.error", fallback: "Error(")
+    /// Error
+    internal static let error = Localization.tr("Localizable", "general.error", fallback: "Error")
+    /// You are offline. Please, enable your Wi-Fi or connect using cellular data.
+    internal static let networkError = Localization.tr("Localizable", "general.networkError", fallback: "You are offline. Please, enable your Wi-Fi or connect using cellular data.")
     /// Localizable.strings
     ///   Kinomania
     /// 
     ///   Created by Vasia Vertiporoh on 27/06/2024.
-    internal static let ok = Localization.tr("Localizable", "general.ok", fallback: "Ok")
+    internal static let ok = Localization.tr("Localizable", "general.ok", fallback: "OK")
   }
   internal enum Movies {
     /// Search

@@ -59,10 +59,18 @@ extension MoviesPresenter: MoviesViewOutput {
     }
 
     func search(text: String) {
+        guard moviesManager.isConnected else {
+            view.onError(ReachabilityError.connectionError)
+            return
+        }
         moviesManager.searchMovie(name: text)
     }
 
     func showMovie(movieId: Int) {
+        guard moviesManager.isConnected else {
+            view.onError(ReachabilityError.connectionError)
+            return
+        }
         router?.showMovie(movieId: movieId)
     }
 

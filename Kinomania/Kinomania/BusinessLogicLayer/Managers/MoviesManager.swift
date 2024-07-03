@@ -37,6 +37,7 @@ protocol MoviesManager: AnyObject {
     var currentPage: Int { get }
     var currentFilter: Filter { get }
     var totalPages: Int { get }
+    var isConnected: Bool { get }
 
     func subscribe(_ subscriber: MovieManagerObserver)
     func unsubscribe(_ subscriber: MovieManagerObserver)
@@ -50,19 +51,26 @@ protocol MoviesManager: AnyObject {
 
 final class MoviesManagerImpl {
     // MARK: - Dependecy
-    @Injected (\.moviesNetworkService) private var moviesNetworkService
+    @Injected(\.moviesNetworkService) private var moviesNetworkService
+    @Injected(\.reachabilityManager) private var reachabilityManager
 
     // MARK: - Internal properties
     private(set) var movies: [MoviesDomainModel] = []
     private(set) var currentPage: Int = 1
     private(set) var totalPages: Int = 0
     private(set) var currentFilter: Filter = .popularity
+    private(set) var isConnected: Bool = true
 
     // MARK: - Private properties
     private var subscribers: [MovieManagerObserver] = []
     private var genres: [GenresResponseModel] = []
     private var isLoadingInProgress: Bool = false
     private var searchWorkItem: DispatchWorkItem?
+
+    // MARK: - Init
+    init() {
+        reachabilityManager.reachabilityDelegate = self
+    }
 }
 
 // MARK: - MoviesManager
@@ -76,6 +84,7 @@ extension MoviesManagerImpl: MoviesManager {
     }
 
     func fetchInitialMovies() {
+        guard isConnected else { return }
         moviesNetworkService.getGenres { [weak self] result in
             guard let self = self else {
                 return
@@ -91,7 +100,7 @@ extension MoviesManagerImpl: MoviesManager {
     }
 
     func fetchMovies() {
-        guard !isLoadingInProgress else { return }
+        guard !isLoadingInProgress && isConnected else { return }
         isLoadingInProgress = true
         moviesNetworkService.getMovies(pageNumber: "\(currentPage)", filter: currentFilter) { [weak self] result in
             guard let self = self else {
@@ -160,6 +169,18 @@ extension MoviesManagerImpl: MoviesManager {
     func reloadData() {
         currentPage = 1
         fetchMovies()
+    }
+}
+
+// MARK: - ReachabilityManagerDelegate
+extension MoviesManagerImpl: ReachabilityManagerDelegate {
+    func connnectionError(connectionError: ReachabilityError) {
+        isConnected = false
+        notify(for: .error(connectionError))
+    }
+
+    func connectionRestored() {
+        isConnected = true
     }
 }
 

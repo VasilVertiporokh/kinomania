@@ -6,9 +6,10 @@
   
 */
 
-"general.ok" = "Ok";
+"general.ok" = "OK";
 "general.cancel" = "Cancel";
-"general.error" = "Error(";
+"general.error" = "Error";
+"general.networkError" = "You are offline. Please, enable your Wi-Fi or connect using cellular data.";
 
 "movies.searchBarPlaceholder" = "Search";
 "movies.sort.popular" = "Popular";
