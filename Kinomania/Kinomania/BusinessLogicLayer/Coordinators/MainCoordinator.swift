@@ -71,6 +71,10 @@ extension MainCoordinator: DetailsModuleRouter {
     }
     
     func showPlayer(videoKey: String) {
-
+        let module = PlayerModuleConfigurator.createModule(router: self, videoKey: videoKey)
+        present(module)
     }
 }
+
+// MARK: - PlayerModuleRouter
+extension MainCoordinator: PlayerModuleRouter { }
